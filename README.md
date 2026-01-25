@@ -21,14 +21,14 @@ Unlike generic "social media advice" that guesses at what works, this skill is b
 ### Using skills.sh (Recommended)
 
 ```bash
-npx skills add your-username/x-algo-skills
+npx add-skill felixondesk/x-algo-skills --skill x-algo-mastery
 ```
 
 ### Manual Installation
 
 ```bash
 # Clone this repository
-git clone https://github.com/your-username/x-algo-skills.git
+git clone https://github.com/felixondesk/x-algo-skills.git
 
 # Copy to your Claude skills directory
 cp -r x-algo-skills/skills/x-algo-mastery ~/.claude/skills/
