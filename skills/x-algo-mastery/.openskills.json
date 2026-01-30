@@ -1,0 +1,9 @@
+{
+  "manifest": {
+    "files": [
+      "README.md",
+      "SKILL.md",
+      "LICENSE.txt"
+    ]
+  }
+}
