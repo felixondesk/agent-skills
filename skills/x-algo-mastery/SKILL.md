@@ -53,6 +53,12 @@ Every recommendation traces directly to X's open-sourced recommendation algorith
 
 ## 📥 Installation
 
+### Automatic Installation
+
+```bash
+npx skills add https://github.com/felixondesk/agent-skills --skill x-algo-mastery
+```
+
 ### Manual Installation
 
 ```bash
