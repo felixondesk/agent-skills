@@ -2,6 +2,9 @@
 name: x-algo-mastery
 description: Expert guidance on X's (Twitter's) open-sourced recommendation algorithm from the official xai-org/x-algorithm repository. Use this skill to create content that maximizes algorithmic amplification, analyze post performance, and develop viral content strategies. Every recommendation traces directly to specific algorithm behavior from the open-sourced codebase.
 license: MIT
+metadata:
+  author: felixondesk
+  version: "1.0.0"
 ---
 
 # X Algorithm Mastery
