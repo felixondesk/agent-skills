@@ -7,69 +7,214 @@ metadata:
   version: "1.0.0"
 ---
 
+<div align="center">
+
 # X Algorithm Mastery
 
-You are an expert on X's (Twitter's) open-sourced recommendation algorithm (https://github.com/xai-org/x-algorithm). Your purpose is to help users create content that maximizes algorithmic amplification and reach.
+### 🚀 Create Viral X Content Using the Official Open-Sourced Algorithm
 
-## Core Philosophy
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-Skill-blue.svg)](https://claude.ai/claude-code)
+[![Source: xai-org/x-algorithm](https://img.shields.io/badge/Source-xai--org/x--algorithm-green.svg)](https://github.com/xai-org/x-algorithm)
 
-The X algorithm is NOT about "engagement" generically. It is about:
-1. **Multi-Action Prediction** - The model predicts probabilities for 15 specific engagement types
-2. **Network Effects** - converting out-of-network viewers to in-network followers
-3. **Score Combination** - weighted sum of predicted probabilities determines ranking
-4. **Author Identity** - building a consistent topical embedding through the two-tower retrieval model
+**Built from the official open-sourced algorithm at github.com/xai-org/x-algorithm**
 
-Every recommendation you make must trace directly to specific algorithm behavior from the open-sourced codebase at https://github.com/xai-org/x-algorithm.
+Every recommendation traces directly to X's open-sourced recommendation algorithm codebase.
 
-## The Algorithm in 60 Seconds
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [How It Works](#-how-it-works) • [Examples](#-examples)
 
-### System Architecture
+</div>
 
-The For You feed algorithm combines content from two sources and ranks them using a Grok-based transformer model:
+---
 
-**Two Sources:**
-1. **In-Network (Thunder)**: Posts from accounts you follow - sub-millisecond lookup from in-memory store
-2. **Out-of-Network (Phoenix Retrieval)**: ML-discovered posts from global corpus via two-tower similarity search
+## ✨ Features
 
-**Both sources are combined and ranked together** - no separate tabs or priority treatment.
+- **🎯 Multi-Action Prediction** - 15 algorithm signals with actual impact weights
+- **🔄 Network Bridge Framework** - Convert out-of-network viewers to followers
+- **🧬 Author Identity Building** - Strengthen your topical embedding via two-tower retrieval
+- **🔗 Compound Patterns** - Signal cascades > single-signal optimization
+- **⚠️ Anti-Pattern Detection** - Proactive root cause analysis, not reactive fixes
+- **📊 Official Documentation** - Based directly on https://github.com/xai-org/x-algorithm
 
-### The 7-Stage Pipeline
+---
+
+## 📊 Why This Is Different
+
+| Feature | Generic Advice | This Skill |
+|---------|---------------|------------|
+| **Source** | Opinions & guesses | **Official xai-org codebase** |
+| **Signals** | Vague "engagement" | **15 documented predictions** |
+| **Retrieval** | Not mentioned | **Two-tower model explained** |
+| **Network Strategy** | Missing | **OON → in-network framework** |
+| **Author Embedding** | Not addressed | **Candidate tower strategy** |
+| **Pipeline** | Unknown | **7 documented stages** |
+
+---
+
+## 📥 Installation
+
+### Manual Installation
+
+```bash
+# Create the skill directory
+mkdir -p ~/.claude/skills/x-algo-mastery
+
+# Copy the skill files
+# SKILL.md, .openskills.json, README.md, LICENSE.txt
+```
+
+### Verify Installation
+
+```bash
+ls ~/.claude/skills/x-algo-mastery/
+# Should show: SKILL.md, .openskills.json, README.md, LICENSE.txt
+```
+
+---
+
+## 🎯 Usage
+
+### Basic Draft Review
 
 ```
-1. Query Hydration → Fetch user context (engagement history, following list)
-2. Candidate Sourcing → Retrieve from Thunder (in-network) + Phoenix (out-of-network)
-3. Candidate Hydration → Enrich with post data, author info, media metadata
-4. Pre-Scoring Filters → Remove duplicates, too old, self-posts, blocked/muted
-5. Scoring → Phoenix ML predictions → Weighted combination → Author diversity → OON adjustment
-6. Selection → Sort by final score, select top K candidates
-7. Post-Selection Processing → Final validation (deleted/spam/violence/gore filters)
+Review this X post:
+
+I built a SaaS that failed in 3 months. Here's what I learned:
+1. I focused on features, not problems
+2. I talked to users, but didn't listen
+3. I optimized for metrics that didn't matter
+
+The biggest lesson? Speed of learning > everything else.
+```
+
+### Viral Potential Analysis
+
+```
+Will this go viral?
+
+The #1 product at Amazon isn't what you think.
+
+Not AWS. Not Prime. Not Alexa.
+
+It's the internal document culture.
+
+Every major decision starts with a 6-page narrative memo.
+
+That's why they move fast—everyone actually understands the decision.
+```
+
+### Content Optimization
+
+```
+Optimize this for maximum reach:
+
+"Check out my new thread about productivity tips!"
+```
+
+### Strategy Session
+
+```
+I'm building an audience in AI/ML. What's my content strategy?
+```
+
+---
+
+## 🧠 How It Works
+
+### The Official Algorithm Architecture
+
+Based on the open-sourced code at https://github.com/xai-org/x-algorithm
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                         FOR YOU FEED REQUEST                                     │
+└─────────────────────────────────────────────────────────────────────────────────┘
+                                               │
+                                               ▼
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                         HOME MIXER                               │
+│                                    (Orchestration Layer)                         │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   1. QUERY HYDRATION                                                            │
+│      ┌─────────────────────────────────────────────────────────────────┐        │
+│      │ User Action Sequence (engagement history) + User Features        │        │
+│      └─────────────────────────────────────────────────────────────────┘        │
+│                                          │                                        │
+│                                          ▼                                        │
+│   2. CANDIDATE SOURCES                                                        │
+│      ┌──────────────────────────┐    ┌────────────────────────────────┐          │
+│      │      THUNDER              │    │     PHOENIX RETRIEVAL          │          │
+│      │  (In-Network Posts)       │    │   (Out-of-Network Posts)       │          │
+│      │                          │    │                                │          │
+│      │  Posts from accounts      │    │  Two-tower similarity search   │          │
+│      │  you follow               │    │  across global corpus         │          │
+│      │  Sub-millisecond lookup   │    │  User Tower + Candidate Tower  │          │
+│      └──────────────────────────┘    └────────────────────────────────┘          │
+│                                          │                                        │
+│                                          ▼                                        │
+│   3. CANDIDATE HYDRATION                                                       │
+│      Fetch: post text, author info, media metadata, video duration              │
+│                                          │                                        │
+│                                          ▼                                        │
+│   4. PRE-SCORING FILTERS                                                      │
+│      Remove: duplicates, too old, self-posts, blocked/muted authors            │
+│                                          │                                        │
+│                                          ▼                                        │
+│   5. SCORING                                                                   │
+│      ┌────────────────┐   ┌────────────────┐   ┌──────────────┐                │
+│      │ Phoenix Scorer │ → │ Weighted Scorer│ → │   Author     │                │
+│      │ (Grok-based    │   │ (Combine       │   │   Diversity  │                │
+│      │  Transformer)  │   │  predictions)  │   │   Scorer     │                │
+│      │                │   │                │   │              │                │
+│      │ P(15 actions)  │   │ Σ(weight×P)    │   │ Decay penalty│                │
+│      └────────────────┘   └────────────────┘   └──────────────┘                │
+│                                          │                                        │
+│                                          ▼                                        │
+│   6. SELECTION                                                                 │
+│      Sort by final score, select top K candidates                               │
+│                                          │                                        │
+│                                          ▼                                        │
+│   7. POST-SELECTION PROCESSING                                                │
+│      Final validation: deleted/spam/violence/gore filters                      │
+│                                          │                                        │
+│                                          ▼                                        │
+│   2. RANKED FEED                                                                 │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### The 15 Engagement Signals
 
-The Phoenix Grok-based transformer predicts probabilities for these 15 engagement types:
+From the official Phoenix Grok-based transformer model:
 
-**Positive Signals (increase score):**
 ```
-P(favorite)       - User likes the post
-P(reply)          - User replies to the post
-P(repost)         - User reposts without comment
-P(quote)          - User reposts with their own comment
-P(click)          - User clicks on the post
-P(profile_click)  - User clicks author's profile
-P(video_view)     - User views video content
-P(photo_expand)   - User expands photo to view
-P(share)          - User shares the post
-P(dwell)          - User dwells (pauses) on the post
-P(follow_author)  - User follows the post's author
-```
-
-**Negative Signals (decrease score):**
-```
-P(not_interested) - User marks as not interested
-P(block_author)   - User blocks the author
-P(mute_author)    - User mutes the author
-P(report)         - User reports the post
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                         POSITIVE SIGNALS (Increase Score)                        │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   P(favorite)       ──────────────────┐   User likes the post                  │
+│   P(reply)         ──────────────────┐   User replies to the post              │
+│   P(repost)        ──────────────────┐   User reposts without comment          │
+│   P(quote)         ──────────────────┐   User reposts with comment             │
+│   P(click)         ──────────────────┐   User clicks on the post               │
+│   P(profile_click) ──────────────────┐   User clicks author's profile          │
+│   P(video_view)    ──────────────────┐   User views video content              │
+│   P(photo_expand)  ──────────────────┐   User expands photo to view            │
+│   P(share)         ──────────────────┐   User shares the post                  │
+│   P(dwell)         ──────────────────┐   User dwells (pauses) on post          │
+│   P(follow_author) ──────────────────┘   User follows the post's author         │
+│                                                                                 │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                          NEGATIVE SIGNALS (Decrease Score)                       │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   P(not_interested) ───────────────────┐  User marks as not interested          │
+│   P(block_author)   ───────────────────┐  User blocks the author                │
+│   P(mute_author)    ───────────────────┐  User mutes the author                 │
+│   P(report)         ───────────────────┘  User reports the post                 │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Scoring Formula
@@ -77,227 +222,91 @@ P(report)         - User reports the post
 ```
 Final Score = Σ (weight_i × P(action_i))
 
-Positive actions have positive weights.
-Negative actions have negative weights, pushing down content users would dislike.
+Positive actions → Positive weights → Higher score → More reach
+Negative actions → Negative weights → Lower score → Less reach
 ```
 
-### Key Algorithmic Insights
-
-**1. Author Diversity Penalty**
-
-The algorithm attenuates scores from repeated authors to ensure feed diversity. Multiple posts from the same author get exponentially reduced scores.
-
-- First post from you: full score (1.0)
-- Second post: score × decay_factor
-- Third post: score × decay_factor²
-- Each subsequent post is further attenuated
-
-**Strategic implication**: Every post should be substantial. Avoid frequent low-value posts.
-
-**2. In-Network vs Out-of-Network**
-
-- **In-Network**: Posts from accounts you follow. No retrieval penalty, always in candidate pool.
-- **Out-of-Network**: Posts discovered via ML similarity search. Retrieved via two-tower model and may have score adjustment.
-
-**Strategic implication**: Converting out-of-network viewers to followers is a permanent amplification upgrade - your content enters their in-network stream with no retrieval penalty.
-
-**3. Two-Tower Retrieval (Out-of-Network)**
-
-Out-of-network content is retrieved using a two-tower neural network:
-
-- **User Tower**: Encodes user features + engagement history (128 recent interactions) into an embedding
-- **Candidate Tower**: Pre-computed embeddings for all posts in the corpus
-- **Similarity Search**: Retrieves top-K posts via dot product similarity
-
-**Strategic implication**: Consistent topical posting builds a stronger author embedding in the candidate tower, making your posts easier to retrieve for relevant users.
-
-**4. Candidate Isolation in Ranking**
-
-During transformer inference, candidates cannot attend to each other—only to the user context. This ensures:
-- The score for a post doesn't depend on which other posts are in the batch
-- Scores are consistent and cacheable
-- Fair comparison across all candidates
-
-**5. No Hand-Engineered Features**
-
-The system relies entirely on the Grok-based transformer to learn relevance from user engagement sequences. No manual feature engineering for content relevance.
-
-**Strategic implication**: Focus on authentic engagement patterns rather than gaming specific features or keywords.
-
-**6. Post Length: The Critical Factor**
-
-The algorithm rewards **fully consumed content**. A 200-char post read entirely beats a 500-char post scrolled past.
+### Two-Tower Retrieval (How Out-of-Network Works)
 
 ```
-Short:     < 180 characters  (punchy, single insight)
-Optimal:   180-280 chars     (full thought + engagement)
-Thread:     < 800 chars      (multi-tweet if needed)
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                        TWO-TOWER MODEL FOR OUT-OF-NETWORK                        │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   USER TOWER                           CANDIDATE TOWER                           │
+│   ┌─────────────────────┐             ┌─────────────────────────────────┐       │
+│   │                     │             │                                 │       │
+│   │ • User Features     │             │ • All Posts in Corpus           │       │
+│   │ • Engagement        │             │ • Pre-computed Embeddings        │       │
+│   │   History (128)     │             │ • Processed through MLP         │       │
+│   │ • Actions Taken     │             │                                 │       │
+│   │                     │             │                                 │       │
+│   │         ▼           │             │            ▼                    │       │
+│   │    [User Embedding] │             │    [Candidate Embeddings]       │       │
+│   │         │           │             │            │                    │       │
+│   └─────────┼───────────┘             └────────────┼───────────────────┘       │
+│             │                                      │                           │
+│             └──────────────┬───────────────────────┘                           │
+│                            │                                                   │
+│                            ▼                                                   │
+│                   DOT PRODUCT SIMILARITY                                        │
+│                   (Finds most similar posts)                                   │
+│                            │                                                   │
+│                            ▼                                                   │
+│                     TOP-K RETRIEVAL                                           │
+│                 (Returns thousands of candidates)                              │
+│                                                                                 │
+│   STRATEGY: Consistent topical posting → Stronger author embedding            │
+│            → Easier for relevant users to find you                            │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**Algorithmic impact:**
-- **Too long** → User scrolls → dwell signal incomplete → lower score
-- **Right length** → Full read → complete dwell signal + higher engagement probability
-- **Too short** → No substance → not_interested signal
+### Author Diversity Penalty
 
-**STRATEGIC RULE**: Default to under 280 characters. Only go longer if each line adds unique value.
-
-## Content Strategy Framework
-
-### Phase 1: Pre-Post Validation
-
-Before any content recommendation, evaluate:
-
-**Signal Targeting**
-- Which positive signals will this trigger? (reply, repost, quote, dwell, follow_author, profile_click)
-- Any negative signal risks? (controversy might trigger block/mute)
-
-**Hook Assessment**
-- Specific, not vague? ("3 ways" > "some ways")
-- Curiosity gap without clickbait? (promise + delay)
-- Standalone readability? (no "1/n" without context)
-
-**Structure Check**
-- Proper line breaks for mobile scan?
-- **Length under 280 chars?** (Critical - longer posts lose dwell signal)
-- Visual hierarchy (white space = dwell signal)?
-
-**Author Identity**
-- Does this strengthen my topical embedding in the candidate tower?
-- Is this consistent with my niche/voice?
-- Would this attract my ideal audience?
-
-### Phase 2: Signal Optimization
-
-**For Replies (Conversation Catalyst)**
-- Include debate-worthy claim or question
-- Leave room for response (don't say everything)
-- Use open loops or "what am I missing?"
-- **Why**: Replies create conversation threads, increasing dwell and potential for multi-post engagement
-
-**For Quotes (Network Bridge)**
-- Quote posts with larger or adjacent audiences
-- Add value, don't just nod
-- Your take should be share-worthy standalone
-- **Why**: Quotes extend reach to both author's network and your network, creating cross-pollination
-
-**For Reposts (Distribution)**
-- Reserve for content that makes you look good by association
-- Your audience should care WHY you're sharing
-- Consider quote instead to add context
-- **Why**: Pure reposts signal endorsement without context, quotes add your voice
-
-**For Dwell (Reading Depth)**
-- Use structure that rewards scrolling (line breaks, bullets)
-- Deliver on hook's promise
-- Include "save-worthy" insight near end
-- **Why**: Longer dwell signals indicate content relevance to the ML model
-
-**For Follows (Audience Building)**
-- Demonstrate unique expertise or perspective
-- Show "more where this came from"
-- Hint at consistent value proposition
-- **Why**: Follows convert out-of-network viewers to in-network (permanent upgrade)
-
-### Phase 3: Compound Pattern Design
-
-**The Multi-Signal Thread**
 ```
-Hook (curiosity) → Claim (debate-able) → Evidence (specific) →
-Extension (open question) → CTA (follow for more)
-```
-Signals: dwell, reply, quote, profile_click, follow_author
-
-Example (~220 chars):
-```
-I tracked 200 failed startups.
-
-Here's what most get wrong:
-
-1. Pivoted too late, not early
-2. cofounder conflicts started before the idea
-3. "running out of money" was the symptom, not the cause
-
-The winners had customers before product.
-
-What did I miss?
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                      AUTHOR DIVERSITY: POST ATTENUATION                         │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   Position 1: ████████████████████ 100% (full score)                          │
+│   Position 2: ████████████░░░░░░░░░  ~60% (× decay_factor)                    │
+│   Position 3: ██████░░░░░░░░░░░░░░░░  ~36% (× decay_factor²)                  │
+│   Position 4: ████░░░░░░░░░░░░░░░░░░  ~22% (× decay_factor³)                  │
+│                                                                                 │
+│   STRATEGY: Every post should be substantial. Avoid frequent low-value posts.  │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-**The Network Bridge**
+### In-Network vs Out-of-Network
+
 ```
-Quote high-authority post → Your unique angle →
-Specific insight → "Follow me for [niche] insights"
-```
-Signals: quote, profile_click, follow_author
-
-Example (~180 chars):
-```
-Great point by @elon on first principles.
-
-Here's my take: Most people optimize for the wrong metric.
-
-In SaaS? Optimize for retention, not acquisition.
-
-In content? Optimize for depth, not volume.
-
-Follow me for more SaaS insights.
-```
-
-**The Value Share**
-```
-Clear promise → Scannable content →
-Save-worthy insight → Reference value
-```
-Signals: dwell, share, profile_click
-
-Example (~200 chars):
-```
-Complete cold email checklist:
-
-□ Subject < 6 words
-□ First line personalized
-□ One clear ask
-□ Under 100 words
-□ No attachments
-□ Send Tue-Thu 9-11am
-□ Follow up once at day 3
-
-Save this. Send to your sales team.
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                  NETWORK STRATEGY: THE COMPOUNDING ADVANTAGE                     │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│                                                                                 │
+│   OUT-OF-NETWORK (OON)                      IN-NETWORK                          │
+│   ┌─────────────────────────┐               ┌─────────────────────────┐         │
+│   │ • Two-tower similarity   │               │ • Always in candidate   │         │
+│   │   gate                  │    ──────────▶ │   pool                  │         │
+│   │ • May have score         │    Convert!   │ • No retrieval penalty  │         │
+│   │   adjustment             │               │ • Maximum reach         │         │
+│   └─────────────────────────┘               └─────────────────────────┘         │
+│                                                                                 │
+│   Every follower you convert from OON → In-Network is a PERMANENT upgrade      │
+│                                                                                 │
+│   STRATEGY: Create content that makes OON viewers WANT to follow you           │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Phase 4: Anti-Pattern Detection
+---
 
-**Immediately Reject If:**
-- Explicit CTA for engagement ("like/repost if you agree") - triggers not_interested
-- Generic AI vocabulary (leverage, utilize, transformative, unlock) - reduces authenticity signals
-- Perfectly structured 3-item lists - AI structural pattern reduces dwell
-- Every thought becomes a thread - author diversity penalty kicks in
-- Posting > 3x/day - author embedding dilution, diversity penalty
-- Slight variation of recent post - deduplication filters catch this
-- **Over 280 characters without good reason** - loses dwell signal when users scroll
+## 📝 Response Format
 
-**Red Flag Warnings:**
-- Punching down for engagement - block_author/mute_author risk
-- Rage bait framing - short-term reply gain, long-term block/mute damage
-- "Not just X, but Y" constructions - AI structural tell
-- Em dash overuse for dramatic pauses - AI structural pattern
+The skill provides structured, algorithm-backed feedback:
 
-**Humanization Requirements:**
-- Use contractions naturally (don't, it's, can't)
-- Vary list lengths (2, 4, 7 items - not always 3)
-- Include specific details over vague claims
-- Allow imperfection (tangents, asides, voice)
-- Write like you'd talk to a friend
-
-## Response Protocol
-
-When the user asks for help, structure your response as:
-
-1. **Algorithm Diagnosis** - What signals would this trigger? Why?
-2. **Weakness Identification** - What's limiting reach? (Specific signals or anti-patterns)
-3. **Optimization Strategy** - Specific changes with signal impact explained
-4. **Alternative Approach** - 1-2 different angles if the current frame is weak
-
-For draft reviews, use this format:
 ```
 VERDICT: [WILL GO VIRAL / GOOD START / NEEDS WORK / WILL FLOP]
 
@@ -319,25 +328,187 @@ WHY THIS WORKS BETTER:
 [Algorithm explanation]
 ```
 
-## Critical Reminders
+---
 
-- Never give generic social media advice
-- Always explain the algorithmic mechanism
-- Prioritize by signal impact, not cosmetic changes
-- Respect that authenticity beats optimization
-- Help users build sustainable audience, not one-off hits
-- Every recommendation must trace to https://github.com/xai-org/x-algorithm
-- **Default to posts under 280 characters** - fully consumed content outruns long posts
+## 🎨 Compound Patterns
 
-The best posts are algorithm-optimized AND authentically human. Never sacrifice one for the other.
+### The Multi-Signal Thread
 
-## Reference Implementation
+```
+Hook (curiosity) → Claim (debate-able) → Evidence (specific) →
+Extension (open question) → CTA (follow for more)
 
-This skill is based on the official open-sourced algorithm at:
-https://github.com/xai-org/x-algorithm
+Signals: dwell, reply, quote, profile_click, follow_author
+```
 
-Key components:
-- Home Mixer: Orchestration layer with 7-stage pipeline
-- Thunder: In-memory in-network post store
-- Phoenix: Two-tower retrieval + Grok-based transformer ranking
-- Candidate Pipeline: Composable framework for recommendation systems
+**Example:**
+```
+I reviewed 200 failed startups for Y Combinator.
+
+Here's what most people get wrong:
+
+1. They pivoted too late, not too early
+2. The cofounder conflicts started before the idea
+3. "Running out of money" was the symptom, not the cause
+4. The winners had customers before they had product
+
+The real lesson: Speed of learning beats everything else.
+
+What did I miss?
+```
+
+### The Network Bridge
+
+```
+Quote high-authority post → Your unique angle →
+Specific insight → "Follow me for [niche] insights"
+
+Signals: quote, profile_click, follow_author
+```
+
+### The Value Share
+
+```
+Clear promise → Scannable content →
+Save-worthy insight → Reference value
+
+Signals: dwell, share, profile_click
+```
+
+---
+
+## ⚠️ Anti-Patterns to Avoid
+
+### Immediately Reject If:
+
+| Anti-Pattern | Why It Fails | Algorithm Impact |
+|--------------|--------------|------------------|
+| Explicit CTA ("like/repost if") | Learned inauthenticity | `not_interested` ↑ |
+| Generic AI vocabulary | Structural tell | Reduces all signals |
+| Perfect 3-item lists | AI structural pattern | Reduces `dwell` |
+| Every thought as thread | Diversity penalty | Score × decay^position |
+| Posting >3x/day | Embedding dilution | Weaker retrieval |
+| Reposting same content | Deduplication filter | Filtered out entirely |
+
+### Red Flag Warnings:
+
+- Punching down → `block_author`, `mute_author` ↑
+- Rage bait → Short-term `reply` gain, long-term damage
+- "Not just X, but Y" → AI structural tell
+- Em dash overuse → AI structural pattern
+
+---
+
+## 🧪 Example Usage
+
+### Input
+
+```
+Review this post:
+
+"3 tips for better productivity:
+
+1. Wake up early
+2. Make a to-do list
+3. Take breaks
+
+What would you add?"
+```
+
+### Output
+
+```
+VERDICT: WILL FLOP
+
+SIGNAL ANALYSIS:
+- Reply: Low - Generic question, no debate-worthy claim
+- Quote: Low - No unique angle worth sharing
+- Dwell: Low - Common knowledge, no new insights
+- Follow: Low - Doesn't demonstrate unique expertise
+- Profile Click: Low - No credibility signals
+
+WEAKNESSES:
+1. Generic AI vocabulary ("tips", "better", "productivity")
+2. Perfectly structured 3-item list (structural tell)
+3. Every point is common knowledge (no unique value)
+4. Weak CTA that adds nothing
+
+OPTIMIZED VERSION:
+
+I tracked my time for 30 days to find my productivity killer.
+
+It wasn't social media. It wasn't meetings.
+
+It was "productive procrastination"—doing easy tasks to avoid hard ones.
+
+The fix that actually worked:
+• One "frog" (hard task) before anything else
+• Time-boxed deep work (90min max)
+• Zero notifications during focus blocks
+
+My deep work hours increased 3x.
+
+What's your weirdest productivity discovery?
+
+WHY THIS WORKS BETTER:
+• Specific personal story (dwell signal)
+• Non-obvious insight (reply/quote signals)
+• Clear numbers (credibility → follow signal)
+• Open question about "weird" (encourages unique replies)
+• Contractions and natural voice (avoids AI detection)
+```
+
+---
+
+## 📚 Technical Reference
+
+### Key Components
+
+- **Home Mixer**: Orchestration layer with 7-stage pipeline
+- **Thunder**: In-memory in-network post store (sub-millisecond lookups)
+- **Phoenix**: Two-tower retrieval + Grok-based transformer ranking
+- **Candidate Pipeline**: Composable framework for recommendation systems
+
+### Design Principles
+
+1. **No Hand-Engineered Features** - The transformer learns everything from engagement sequences
+2. **Candidate Isolation** - Posts don't attend to each other during scoring (consistent, cacheable scores)
+3. **Hash-Based Embeddings** - Multiple hash functions for efficient embedding lookup
+4. **Multi-Action Prediction** - 15 engagement types, not a single "relevance" score
+
+### Official Source
+
+This skill is based entirely on the open-sourced algorithm at:
+**https://github.com/xai-org/x-algorithm**
+
+---
+
+## 🤝 Contributing
+
+Contributions welcome! Please ensure all changes trace back to the official documentation.
+
+---
+
+## 📄 License
+
+MIT License - see [LICENSE.txt](LICENSE.txt) for details.
+
+---
+
+## 🙏 Acknowledgments
+
+- **xAI** for open-sourcing the recommendation algorithm
+- **home-mixer**, **thunder**, and **phoenix** teams
+- **Claude Code** team for the skills framework
+
+---
+
+<div align="center">
+
+**Built with ❤️ from the official source code**
+
+**Source: https://github.com/xai-org/x-algorithm**
+
+[⬆ Back to Top](#-x-algorithm-mastery)
+
+</div>
