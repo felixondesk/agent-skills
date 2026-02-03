@@ -1,5 +1,5 @@
 ---
-name: x-algo-mastery
+name: x-algo-post
 description: Expert guidance on X's (Twitter's) open-sourced recommendation algorithm from the official xai-org/x-algorithm repository. Use this skill to create content that maximizes algorithmic amplification, analyze post performance, and develop viral content strategies. Every recommendation traces directly to specific algorithm behavior from the open-sourced codebase.
 license: MIT
 metadata:
@@ -56,14 +56,14 @@ Every recommendation traces directly to X's open-sourced recommendation algorith
 ### Automatic Installation
 
 ```bash
-npx skills add https://github.com/felixondesk/agent-skills --skill x-algo-mastery
+npx skills add https://github.com/felixondesk/agent-skills --skill x-algo-post
 ```
 
 ### Manual Installation
 
 ```bash
 # Create the skill directory
-mkdir -p ~/.claude/skills/x-algo-mastery
+mkdir -p ~/.claude/skills/x-algo-post
 
 # Copy the skill files
 # SKILL.md, .openskills.json, README.md, LICENSE.txt
@@ -72,7 +72,7 @@ mkdir -p ~/.claude/skills/x-algo-mastery
 ### Verify Installation
 
 ```bash
-ls ~/.claude/skills/x-algo-mastery/
+ls ~/.claude/skills/x-algo-post/
 # Should show: SKILL.md, .openskills.json, README.md, LICENSE.txt
 ```
 
