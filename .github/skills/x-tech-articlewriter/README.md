@@ -4,6 +4,12 @@ A specialized skill for crafting high-engagement, long-form tech articles and th
 
 ## 🚀 Key Features
 
+### 📦 Installation
+
+```bash
+npx skills add felixondesk/agent-skills --skill x-tech-articlewriter
+```
+
 - **Engagement-Optimized Structure**: Utilizes a proven framework designed to trigger "Show More" interactions and maximize dwell time.
 - **Hook Specialist**: Crafts high-stakes introductory paragraphs (first 200 characters) to prevent scrolling.
 - **Visual Integration**: Automatically generates a relevant **5:2 aspect ratio header image** for every article to enhance visual appeal.

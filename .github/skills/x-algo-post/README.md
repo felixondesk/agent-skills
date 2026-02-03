@@ -44,11 +44,17 @@ Every recommendation traces directly to X's open-sourced recommendation algorith
 
 ## 📥 Installation
 
+### Automatic Installation
+
+```bash
+npx skills add felixondesk/agent-skills --skill x-algo-post
+```
+
 ### Manual Installation
 
 ```bash
 # Create the skill directory
-mkdir -p ~/.claude/skills/x-algo-mastery
+mkdir -p ~/.claude/skills/x-algo-post
 
 # Copy the skill files
 # SKILL.md, .openskills.json, README.md, LICENSE.txt
@@ -57,7 +63,7 @@ mkdir -p ~/.claude/skills/x-algo-mastery
 ### Verify Installation
 
 ```bash
-ls ~/.claude/skills/x-algo-mastery/
+ls ~/.claude/skills/x-algo-post/
 # Should show: SKILL.md, .openskills.json, README.md, LICENSE.txt
 ```
 
