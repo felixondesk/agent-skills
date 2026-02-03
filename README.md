@@ -21,7 +21,7 @@ Unlike generic "social media advice" that guesses at what works, this skill is b
 ### Using skills.sh (Recommended)
 
 ```bash
-npx add-skill felixondesk/x-algo-skills --skill x-algo-mastery
+npx skills add felixondesk/x-algo-skills
 ```
 
 ### Manual Installation
@@ -100,6 +100,11 @@ Expert guidance on X's open-sourced recommendation algorithm. Use this skill to:
 
 - [x-algo-mastery README](skills/x-algo-mastery/README.md) - Detailed usage guide
 - [Official Algorithm](https://github.com/xai-org/x-algorithm) - Source documentation
+
+## Listing on skills.sh
+
+skills.sh only lists skills that have been installed using the official `npx skills add` command.
+If you want this repo to appear on the leaderboard, make sure installs use the command above.
 
 ## Contributing
 
