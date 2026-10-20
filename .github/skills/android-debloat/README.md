@@ -23,11 +23,18 @@ The brand lists cover Samsung, Xiaomi / Redmi / POCO, Realme / Oppo / OnePlus, V
 
 ## Safety
 
+All removals go through `scripts/debloat.sh`, which enforces the rules in code so they don't depend on the AI remembering them:
+
+- It removes only apps that the list marks SAFE or CAUTION. Unknown apps are never touched.
+- It has a hard-coded block list of core apps (System UI, Settings, Play Services, launchers, keyboards, security apps, updaters), and on phones it also blocks calls/SMS/VoLTE apps.
+- It checks the device after **every** removal. If anything looks wrong, it puts that app back and stops.
+- `bash scripts/debloat.sh selftest` checks the safety rules offline.
+
 - Uses `pm uninstall --user 0` only. The app is hidden for your user, not deleted from the system.
 - Never removes core system apps (Settings, Play Store, launcher, keyboard, and calls/SMS on phones), even if asked.
 - Never deletes your photos or documents.
 - Asks before every removal.
-- Restore any app: `adb shell cmd package install-existing <package>`. A factory reset also brings everything back.
+- Restore any app: `adb shell pm install-existing <package>`. A factory reset also brings everything back.
 
 ## Install
 

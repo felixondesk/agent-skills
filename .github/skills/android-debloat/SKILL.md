@@ -18,9 +18,13 @@ The person you are helping is NOT technical. They cannot read shell output and t
 ## Hard safety rules
 
 - Never root, unlock the bootloader, flash anything or run `pm clear` on system apps.
-- Remove only with `pm uninstall --user 0 <pkg>`. Never `pm uninstall` without `--user 0`, never `rm` on /system.
-- Never remove anything on the NEVER list in `references/bloatware.md`, even if they ask. Explain why in one line.
-- Never remove a launcher or keyboard unless a replacement is installed AND opened once.
+- **Remove apps ONLY through `scripts/debloat.sh`.** Never run `pm uninstall`, `pm disable` or `rm` yourself, even for "just one app". The script is the safety net:
+  - It removes only packages that `references/bloatware.md` marks SAFE or CAUTION, and refuses NEVER and unknown packages.
+  - It has a hard-coded floor of core apps (System UI, Settings, Play Services, launchers, keyboards, providers, security apps, updaters) that it refuses even if the list is edited.
+  - On devices with a SIM, it refuses dialer, SMS, contacts and VoLTE apps.
+  - It checks the device after every single removal (responds, System UI running, a real home screen). If anything fails, it restores that app and stops.
+- If the script refuses a package, do not work around it. Tell them in one line why it stays.
+- Launchers and keyboards are never removed. To switch launcher, install the new one and set it as default. The old one can stay.
 - On a PHONE (has SIM / calls), never remove the dialer, call screen (incallui), messaging, or telephony apps. On a Wi-Fi-only tablet they are optional.
 - Never delete their personal files (photos, PDFs, documents, videos). You may suggest deleting old `.apk` installer files in Download, but list them and ask first.
 - Show the full removal list and get a clear "yes" before removing anything.
@@ -96,9 +100,10 @@ Also mention any old `.apk` files or obviously huge forgotten files in Download,
 Then ask: "Shall I go ahead and remove the ✅ list and the ⚠️ ones you said yes to?"
 
 ### 7. Measure, then remove
-1. Baseline: `grep MemAvailable /proc/meminfo`, `df -h /data`, and the package count.
-2. Restore log: `~/debloat-<model>-<YYYY-MM-DD>.txt` on the laptop. First line: `# Restore one: adb shell cmd package install-existing <pkg>`
-3. For each package: `pm uninstall --user 0 <pkg>`. On `Success`, append it to the log. Collect failures and don't retry blindly.
+`D` below means this skill's folder. Run the script with `bash`, which works on Windows (Git Bash), macOS and Linux.
+1. Before building the plan in step 6, dry-run every candidate: `bash "$D/scripts/debloat.sh" -s SERIAL check pkg1 pkg2 ...`. Only packages that print `ALLOW` go in the ✅/⚠️ groups. `DENY` goes to 🔒 with the script's reason. `UNKNOWN` stays and isn't mentioned unless they ask.
+2. Baseline: `grep MemAvailable /proc/meminfo`, `df -h /data`, and the package count.
+3. Remove: `bash "$D/scripts/debloat.sh" -s SERIAL remove ~/debloat-<model>-<YYYY-MM-DD>.txt pkg1 pkg2 ...`. It writes the restore log itself. Exit code 2 means it stopped because the device looked unhealthy. Tell them plainly, don't continue, and check the device with them.
 4. Optional, if they want it snappier: animations to 0.5×
    `settings put global window_animation_scale 0.5; settings put global transition_animation_scale 0.5; settings put global animator_duration_scale 0.5`
 
@@ -113,10 +118,10 @@ Give them a simple before/after table.
 
 ### 9. Test and close
 - Ask them to open the apps they care about (camera, WhatsApp, banking, calls/SMS on a phone) and confirm they work.
-- Tell them where the restore log is and that any app can come back with `adb shell cmd package install-existing <pkg>`. If they're unsure what broke, restore the most recent batch.
+- Tell them where the restore log is and that any app can come back with `adb shell pm install-existing <pkg>` (or the script's `restore`).
 - Turn off Wi-Fi debugging: Android 11+ → they switch off **Wireless debugging**. Android 10 or older → `adb usb`, or just restart. Optionally they can turn Developer options off.
 
 ## If something goes wrong
-- App or feature broke → find the likely package in the log, `cmd package install-existing <pkg>`, then retest.
-- Black screen / no home screen → `cmd package install-existing` the launcher (`com.sec.android.app.launcher`, `com.miui.home`, `com.oppo.launcher`, `com.android.launcher3`, `com.bbk.launcher2`...).
-- Boot loop (very rare with `--user 0`, mostly Xiaomi security packages) → wait. ADB usually still connects during boot, so restore the last batch. Factory reset is the last resort: it brings back everything, but it also erases their data, so say that plainly first.
+- App or feature broke → `bash "$D/scripts/debloat.sh" -s SERIAL restore LOGFILE <pkg>` for the likely package, then retest. Not sure which one → run `restore LOGFILE` with no package to bring everything back.
+- Black screen / no home screen → `adb shell pm install-existing` the launcher (`com.sec.android.app.launcher`, `com.miui.home`, `com.oppo.launcher`, `com.android.launcher3`, `com.bbk.launcher2`...).
+- Boot loop (very rare with `--user 0`, mostly Xiaomi security packages) → wait. ADB usually still connects during boot, so run `restore LOGFILE`. Factory reset is the last resort: it brings back everything, but it also erases their data, so say that plainly first.
