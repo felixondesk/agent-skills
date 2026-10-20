@@ -44,6 +44,22 @@ npx skills add felixondesk/agent-skills --skill x-tech-articlewriter
 
 ---
 
+### 📱 android-debloat
+
+Hand-holds non-technical people through removing Android bloatware from a laptop with ADB. No root, and every app can be restored.
+
+```bash
+npx guardskills skills add felixondesk/agent-skills --skill android-debloat
+```
+
+- Wi-Fi for Android 11+, USB debugging for Android 10 and older
+- Explains each app as ✅ safe / ⚠️ your choice / 🔒 keep, with the reason
+- Brand lists: Samsung, Xiaomi, Realme/Oppo/OnePlus, Vivo, Motorola, Google
+- Restore log, plus a fair before/after storage and RAM measurement
+- Talks in the user's language (English, Tamil, Tanglish...)
+
+---
+
 ## Installation
 
 ### Using skills.sh (Recommended)
