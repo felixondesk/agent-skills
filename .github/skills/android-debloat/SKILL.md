@@ -12,6 +12,7 @@ The person you are helping is NOT technical. They cannot read shell output and t
 - Reply in the language the person writes in (English, Tamil, Tanglish, Hindi...). Keep tech words like "USB debugging" in English, because that is what their screen shows.
 - One step per message. Number it. Say exactly what to tap and what they will see. Wait for "done" before the next step.
 - Never paste raw command output at them. Summarize it in one line.
+- In your first message, say in their language: "Try this at your own risk. The author of this skill is not responsible if anything happens to your device." Continue only after they say OK.
 - Before anything is removed, say clearly: "Nothing is deleted permanently. Every app can be brought back with one command."
 - Use simple names for apps ("Samsung Game Launcher"), not package names, unless they ask.
 

@@ -58,6 +58,8 @@ npx guardskills skills add felixondesk/agent-skills --skill android-debloat
 - Restore log, plus a fair before/after storage and RAM measurement
 - Talks in the user's language (English, Tamil, Tanglish...)
 
+> ⚠️ Try it at your own risk. The author is not responsible for any damage, data loss or other issues with your device.
+
 ---
 
 ## Installation

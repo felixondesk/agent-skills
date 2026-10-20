@@ -1,5 +1,7 @@
 # android-debloat — a Claude Code skill
 
+> ⚠️ **Try it at your own risk. The author is not responsible for any damage, data loss or other issues with your device.** See [Disclaimer](#disclaimer).
+
 Make an old, slow Android phone or tablet feel faster by removing bloatware from your laptop. **No root**, and every removed app can be restored with one command.
 
 It's built for **non-technical people**. Claude does the technical work and walks you through it one step at a time, in your own language (English, Tamil, Tanglish, Hindi...).
@@ -66,7 +68,9 @@ Open Claude Code and say:
 
 ## Disclaimer
 
-Use at your own risk. Removing system apps with `--user 0` is reversible and doesn't need root, but OEM firmware varies. Xiaomi, Oppo and Vivo can boot loop if you remove their security apps, which this skill refuses to do. Package lists are community knowledge, so check before relying on them for a device you can't afford to break.
+**Try it at your own risk. The author is not responsible for any damage, data loss or other issues with your device.**
+
+Removing system apps with `--user 0` is reversible and doesn't need root, but OEM firmware varies. Xiaomi, Oppo and Vivo can boot loop if you remove their security apps, which this skill refuses to do. Package lists are community knowledge, so check before relying on them for a device you can't afford to break.
 
 ## License
 
